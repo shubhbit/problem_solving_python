@@ -4,4 +4,4 @@ class Node:
         self.next = None
 
     def set_value(self, value):
-        self.value = value 
+        self.value = value
