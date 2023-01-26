@@ -1,36 +1,22 @@
 from node import Node
 
 
-def create_list(data):
-    head = Node()
-    copy = head
-    for val in data:
-        print("adding element {} to linkedlist".format(val))
-        copy.set_value(val)
-        copy.next = Node()
-        copy = copy.next
-    return head
+class LinkedList(object):
+    def __init__(self):
+        self.head = None
+    def create_list(self, data):
+        for index, val in enumerate(data):
+            print("adding element {} to linkedlist".format(val))
+            if index == 0:
+                self.head = Node(val)
+                copy = self.head
+            copy.next = Node(val)
+            copy = copy.next
 
-
-def traverse_list(head):
-    print("Traversing linkedlist..")
-    while head.next != None:
-        print(head.value)
-        head = head.next
-
-
-def find_duplicates_in_list(head):
-    unique = []
-    while head.next != None:
-        if head.value not in unique:
-            unique.append(head.value)
-        else:
-            print("{} is duplicate".format(head.value))
-        head = head.next
-
-
-if __name__ == "__main__":
-    data = [1, 34, 23, 98, 1, 29, 3]
-    head = create_list(data)
-    traverse_list(head)
-    find_duplicates_in_list(head)
+    def traverse_list(self):
+        print("Traversing linkedlist..")
+        copy = self.head
+        while copy.next != None:
+            print(copy.value)
+            copy = copy.next
+        print(copy.value)
