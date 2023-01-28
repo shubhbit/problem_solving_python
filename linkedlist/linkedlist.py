@@ -11,16 +11,15 @@ class LinkedList(object):
             print("adding element {} to linked-list".format(val))
             node = Node(val)
             if index == 0:
-                self.head = node                
+                self.head = node
             else:
                 self.current.next = node
             self.current = node
-
 
     def traverse_list(self):
         print("Traversing linkedlist..")
         copy = self.head
         while copy.next != None:
-            print(copy.value)
+            print(copy.value, end=" ")
             copy = copy.next
-        print(copy.value)
+        print(copy.value),
