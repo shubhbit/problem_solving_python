@@ -10,9 +10,8 @@ class BinaryTreeNode(object):
         self.data = data
         self.left = None
         self.right = None
-        
 
-if __name__ == "__main__":
+def implement_tree():
     root = BinaryTreeNode(50)
     left_child = BinaryTreeNode(20)
     right_child = BinaryTreeNode(45)
@@ -26,3 +25,7 @@ if __name__ == "__main__":
     left_child.right = l2_left_right
     right_child.left = l2_right_left
     right_child.right = l2_right_right
+    return root
+
+if __name__ == "__main__":
+    implement_tree()
