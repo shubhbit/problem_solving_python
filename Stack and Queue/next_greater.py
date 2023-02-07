@@ -7,7 +7,6 @@ def next_greater(ar):
                 st += str(j)
                 break
     st += "-1"
-    print(type(st))
     return " ".join(list(st))
 
 
