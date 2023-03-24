@@ -23,3 +23,4 @@ if __name__ == "__main__":
     a = "allergy"
     b = "allergic"
     is_anagram(a, b)
+    
